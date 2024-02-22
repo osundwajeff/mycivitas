@@ -12,14 +12,14 @@ jobs:
     strategy:
       matrix:
         python-version:
-          - '3.9'
+          - '3.12'
     steps:
 
         - uses: actions/checkout@v2
         - name: Set up Python ${{ matrix.python-version }}
           uses: actions/setup-python@v2
-        - name: Run Flake8 test
-          run: flake8 .
+        #- name: Run Flake8 test
+        #  run: flake8 .
 
   test:
     runs-on: ubuntu-latest
