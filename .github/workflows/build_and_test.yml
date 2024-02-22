@@ -41,6 +41,7 @@ jobs:
             cp sites-enabled/default.conf.template sites-enabled/default.conf
             cp .template.env .env
             make up
+            sleep 60
 
       - name: Test django endpoint
         run: |
